@@ -2,9 +2,9 @@ CS4306 - Algorithm Analysis - Assignment 1
 Modified Gale-Shapley Algorithm for the Hospital/Residents Problem
 
 Team Members:
-- A.J. Robinson - <email>
+- A.J. Robinson - arobi268@students.kennesaw.edu
 - Amir Aissat - aaissat@students.kennesaw.edu
-- Geza Martiny - Gmartiny@student.kennesaw.edu
+- Geza Martiny - Gmartiny@students.kennesaw.edu
 - Noor Muhammad - nmuham22@students.kennesaw.edu
 
 FILES THAT ARE INCLUDED:
