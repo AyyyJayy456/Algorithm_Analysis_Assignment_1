@@ -1,0 +1,6 @@
+Final Matching:
+ALPHA, CARLA
+BETA, BEN
+GAMMA, DAN, ANA
+
+Stable Matching: YES

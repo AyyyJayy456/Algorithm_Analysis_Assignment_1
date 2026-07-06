@@ -1,0 +1,6 @@
+Final Matching:
+MERCY, DARRIUS, JOSEPH
+CITY, ARTHUR, SUNNY
+GENERAL, LATHA
+
+Stable Matching: YES

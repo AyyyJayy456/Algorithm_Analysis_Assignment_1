@@ -126,6 +126,20 @@ def run_modified_gale_shapley(hospitals, residents):
     return hospitals, residents
 
 
+def verify_all_slots_filled(hospitals):
+    """
+    Checks that every hospital has exactly the number of residents
+    equal to its slot capacity.
+    """
+    for h_name, h_data in hospitals.items():
+        if len(h_data["current_matches"]) != h_data["slots"]:
+            print(
+                f"Slot Issue: {h_name} has "
+                f"{len(h_data['current_matches'])} residents but needs {h_data['slots']}."
+            )
+            return False
+    return True
+
 def verify_stability(hospitals, residents):
     """
     Step 4: Build the Stability Checker Function per instruction (b).
@@ -190,11 +204,20 @@ def print_output(hospitals):
 
 # --- Execution Example ---
 if __name__ == "__main__":
-    # To run this, place a valid text file path here (e.g., 'sample_input_1.txt')
-    # file_path = "sample_input_1.txt"
-    # h_dict, r_dict = parse_input_file(file_path)
-    # h_matched, r_matched = run_modified_gale_shapley(h_dict, r_dict)
-    
-    # if verify_stability(h_matched, r_matched):
-    #     print_output(h_matched)
-    pass
+    file_path = input("Enter input file name: ").strip()
+
+    hospitals, residents = parse_input_file(file_path)
+    hospitals, residents = run_modified_gale_shapley(hospitals, residents)
+
+    print("Final Matching:")
+    print_output(hospitals)
+
+    print()
+
+    slots_filled = verify_all_slots_filled(hospitals)
+    stable = verify_stability(hospitals, residents)
+
+    if slots_filled and stable:
+        print("Stable Matching: YES")
+    else:
+        print("Stable Matching: NO")
