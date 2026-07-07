@@ -3,7 +3,7 @@ Modified Gale-Shapley Algorithm for the Hospital/Residents Problem
 
 Team Members:
 - A.J. Robinson - arobi265@students.kennesaw.edu
-- Amir Aissat - aaissat@students.kennesaw.edu
+- Amir Aissat - aaissat@kennesaw.edu
 - Geza Martiny - Gmartiny@students.kennesaw.edu
 - Noor Muhammad - nmuham22@students.kennesaw.edu
 
