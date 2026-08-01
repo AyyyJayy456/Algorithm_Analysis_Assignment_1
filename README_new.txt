@@ -6,15 +6,15 @@ TEAM MEMBERS:
 
 FILES THAT ARE INCLUDED: 
 - Input1.txt     : sample test case 1 for input
-- Ouput1.txt     : sample test case 1 for output
+- Output1.txt     : sample test case 1 for output
 - Input2.txt     : sample test case 2 for input
-- Ouput2.txt     : sample test case 2 for output
+- Output2.txt     : sample test case 2 for output
 - Input3.txt     : sample test case 3 for input
-- Ouput3.txt     : sample test case 3 for output
+- Output3.txt     : sample test case 3 for output
 - Input4.txt     : sample test case 4 for input
-- Ouput4.txt     : sample test case 4 for output
+- Output4.txt     : sample test case 4 for output
 - Input5.txt     : sample test case 5 for input
-- Ouput5.txt     : sample test case 5 for output
+- Output5.txt     : sample test case 5 for output
 - assignment2.py : the main program (algorithm, file parsing, heap-based skyline solver)
 
 
@@ -59,26 +59,26 @@ Full pseudocode is included as a comment block directly at the top of assignment
 
 SAMPLE TEST CASES:
 
-1. Input1.txt / Ouput1.txt
+1. Input1.txt / Output1.txt
    Baseline example directly from the assignment handout. Tests 5 overlapping 
    buildings of varying heights to verify the standard case against the handout output.
 
-2. Input2.txt / Ouput2.txt
+2. Input2.txt / Output2.txt
    Tests disjoint buildings with empty gaps in between, as well as two buildings 
    that touch edge-to-edge at x=13. Verifies that the skyline correctly drops to height 0 
    in empty space without creating redundant zero-height strips.
 
-3. Input3.txt / Ouput3.txt
+3. Input3.txt / Output3.txt
    Tests fully nested buildings where a tall building (h=12) completely covers three 
    shorter buildings beneath it. Also tests adjacent equal-height buildings at x=18 
    to confirm they merge smoothly into a single strip.
 
-4. Input4.txt / Ouput4.txt
+4. Input4.txt / Output4.txt
    Tests duplicate identical buildings (7, 1, 5) sharing boundaries and buildings with 
    the same left edge x=12 but different heights and lengths. Confirms that duplicate points 
    are eliminated and the max-heap tracks active building durations accurately.
 
-5. Input5.txt / Ouput5.txt
+5. Input5.txt / Output5.txt
    A larger stress test consisting of 12 buildings, including nested staircases, narrow spikes, 
    and complex multi-level overlapping chains. Confirms O(n log n) performance and correctness 
    across dense event queues.
