@@ -37,6 +37,25 @@ def exportToOutputFile(fileName, skyline):
 
     file.close()
 
+#=========================================================================
+# pseudocode: sweep-line + max-heap skyline algorithm (O(n log n))
+#
+# function getSkyline(buildings):
+#     sort buildings by left x-coordinate
+#     lines = every left and right x-coordinate from all buildings, sorted
+#     priorityQueue = empty max-heap of (height, right edge)
+#
+#     for each x in lines:
+#         add every building whose left edge is <= x to the heap
+#         remove every building whose right edge is <= x from the heap
+#         currentHeight = height of tallest building still in heap, or 0
+#         if currentHeight changed from the last point, record (currentHeight, x)
+#
+#     return skyline
+#
+# time complexity: O(n log n) - sorting is O(n log n), and each of the 2n
+# edges causes at most one heap push/pop, each O(log n)
+#=========================================================================
 
 class Assignment2:
     def getSkyline(self, buildings):
@@ -61,6 +80,7 @@ class Assignment2:
         for line in lines:
 
             #add all buildings beginning before this coordinate
+            #(sweep forward: activates any building that has started)
             while (buildingIndex < numberOfBuildings and
                    buildings[buildingIndex][1] <= line):
                 
@@ -72,6 +92,7 @@ class Assignment2:
                 buildingIndex += 1
 
             #remove ended buildings
+            #(building's right edge passed, so it can't affect the skyline anymore)
             while priorityQueue and priorityQueue[0][1] <= line:
                 heapq.heappop(priorityQueue)
 
@@ -79,7 +100,8 @@ class Assignment2:
             if priorityQueue:
                 currentHeight = -priorityQueue[0][0]
 
-            # records changes in heigth
+            # records changes in height
+            # (skip if height is unchanged, so output has no duplicate points)
             if skyline and skyline[-1][0] == currentHeight:
                 continue
             skyline.append((currentHeight, line))
