@@ -6,15 +6,15 @@ TEAM MEMBERS:
 
 FILES THAT ARE INCLUDED: 
 - Input1.txt     : sample test case 1 for input
-- Ouput1.txt     : sample test case 1 for output
+- Output1.txt     : sample test case 1 for output
 - Input2.txt     : sample test case 2 for input
-- Ouput2.txt     : sample test case 2 for output
+- Output2.txt     : sample test case 2 for output
 - Input3.txt     : sample test case 3 for input
-- Ouput3.txt     : sample test case 3 for output
+- Output3.txt     : sample test case 3 for output
 - Input4.txt     : sample test case 4 for input
-- Ouput4.txt     : sample test case 4 for output
+- Output4.txt     : sample test case 4 for output
 - Input5.txt     : sample test case 5 for input
-- Ouput5.txt     : sample test case 5 for output
+- Output5.txt     : sample test case 5 for output
 - assignment2.py : the main program (algorithm, file parsing, heap-based skyline solver)
 
 
