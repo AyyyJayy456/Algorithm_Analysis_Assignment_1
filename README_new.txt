@@ -1,5 +1,5 @@
 TEAM MEMBERS:
-- Amir Aissat - aaissat@students.kennesaw.edu
+- Amir Aissat - aaissat@kennesaw.edu
 - Geza Martiny - Gmartiny@student.kennesaw.edu
 - Noor Muhammad - nmuham22@students.kennesaw.edu
 - A.J. Robinson  - arobi265@students.kennesaw.edu
