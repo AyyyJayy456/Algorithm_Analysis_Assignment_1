@@ -1,0 +1,31 @@
+CS4306 - Assignment 2 - Skyline Problem
+Test Case Descriptions
+--------------------------------------
+
+Run format:  python3 assignment2.py <absolute path to InputN.txt> <absolute path to OutputN.txt>
+
+Test 1 - Baseline example from the assignment handout.
+  Overlapping buildings of varying heights. Verifies the standard case and
+  matches the expected output given in the problem statement exactly.
+
+Test 2 - Disjoint buildings with gaps, plus two buildings that touch.
+  Verifies that the skyline correctly drops to height 0 in the empty gaps
+  (x=4 and x=9) and that a building starting exactly where another ends
+  (x=13) is handled without producing a false 0-height strip.
+
+Test 3 - Fully nested buildings.
+  A tall building (h=12) completely covers three shorter buildings, so none
+  of them appear in the output. Also includes two equal-height buildings
+  (h=3) that meet exactly at x=18 and must be merged into a single strip.
+
+Test 4 - Duplicate buildings and shared left edges.
+  Three identical buildings (7,1,5) must collapse into one strip. Two
+  buildings share the same left edge x=12 with the same height but different
+  right edges, testing that the max-heap keeps the longer one alive until
+  x=20.
+
+Test 5 - Larger stress case (12 buildings).
+  A nested "staircase" up and back down, a narrow spike of two adjacent tall
+  buildings at x=10..12, and a separate chain of overlapping buildings on the
+  right side. Exercises the O(n log n) heap behavior with many simultaneous
+  active buildings.
